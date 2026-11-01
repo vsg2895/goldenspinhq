@@ -79,8 +79,11 @@ export default function Logo({
         <span className="font-display text-[18px] font-bold tracking-[-0.02em] text-ink sm:text-[20px]">
           GoldenSpin<span className="text-gold-gradient">HQ</span>
         </span>
+        {/* Hidden under 360px: this tagline is the longest in the network, and
+            at 320px the mark plus it left no room for the header's menu
+            button, which was pushed half off the screen. */}
         <span
-          className={`mt-[5px] text-[9px] font-semibold uppercase tracking-[0.2em] ${
+          className={`mt-[5px] text-[9px] font-semibold uppercase tracking-[0.2em] max-[359px]:hidden ${
             onDark ? 'text-night-muted' : 'text-muted'
           }`}
         >
